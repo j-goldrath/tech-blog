@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Blog</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../public/css/style.css">
+</head>
+
+<body>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <header>
+
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#!" class="brand-logo">Tech Blog</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="sass.html">Home</a></li>
+                    <li><a href="badges.html">Dashboard</a></li>
+                    <li><button class="btn" id="login" href="/login">Login</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <ul class="sidenav" id="mobile-demo">
+            <li><a href="sass.html">Home</a></li>
+            <li><a href="badges.html">Dashboard</a></li>
+            <li><button class="btn" id="login" href="/login">Login</a></li>
+        </ul>
+
+    </header>
+
+    <main>
+
+
+        <div id="primary-container" class="container container-fluid mt-5">
+
+            <!-- post component -->
+            <div class="row">
+                <div class="col s12">
+                    <div class="card blue-grey darken-1">
+                        <div class="card-content white-text">
+                            <div id="post-header-wrapper">
+                                <div id="post-title">
+                                    <span class="card-title">Title Of Post</span>
+                                </div>
+                                <div id="post-author">
+                                    <span class="card-text">Posted by <a>Someone</a> on 1/1/2021</span>
+                                </div>
+                            </div>
+                            <div id="post-content" class="white black-text">
+                                <p>This is where the text content of a blog post would go.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- create new post component -->
+            <div class="row">
+                <div class="col s12">
+                    <div class="card blue-grey darken-1">
+                        <div class="card-content white-text">
+                            <div id="create-post-header">
+                                <span class="card-title">Create New Post</span>
+                            </div>
+                            <div id="p-divider" class="divider"></div>
+                            <div class="row">
+                                <div class="input-field col s12 m6">
+                                    <p>Title:</p>
+                                    <p contenteditable="true" id="new-post-title"></p>
+                                </div>
+
+
+                                <div class="input-field col s12">
+                                    <p>Content:</p>
+                                    <p contenteditable="true" id="new-post-content"></p>
+                                </div>
+
+                                <div class="input-field col s6">
+                                    <button id="cancel-new-post-button" class="btn waves-effect waves-light fwb orange" type="submit"
+                                        name="action">Cancel</button>
+                                </div>
+
+                                <div class="input-field col s6">
+                                    <button id="create-new-post-button" class="btn waves-effect waves-light fwb green" type="submit"
+                                        name="action">Create</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- edit/delete post component -->
+            <div class="row">
+                <div class="col s12">
+                    <div class="card blue-grey darken-1">
+                        <div class="card-content white-text">
+                            <div id="create-post-header">
+                                <span class="card-title">Update/Delete Post</span>
+                            </div>
+                            <div id="p-divider" class="divider"></div>
+                            <div class="row">
+                                <div class="input-field col s12 m6">
+                                    <p>Title:</p>
+                                    <p contenteditable="true" id="new-post-title"></p>
+                                </div>
+
+
+                                <div class="input-field col s12">
+                                    <p>Content:</p>
+                                    <p contenteditable="true" id="new-post-content"></p>
+                                </div>
+
+                                <div class="input-field col s4">
+                                    <button class="btn waves-effect waves-light fwb orange" type="submit"
+                                        name="action">Cancel</button>
+                                </div>
+
+                                <div class="input-field col s4">
+                                    <button class="btn waves-effect waves-light fwb red" type="submit"
+                                        name="action">Delete</button>
+                                </div>
+
+                                <div class="input-field col s4">
+                                    <button class="btn waves-effect waves-light fwb green" type="submit"
+                                        name="action">Update</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- list of posts component -->
+            <div class="row">
+                <div class="col s12">
+                    <div class="card blue-grey darken-1">
+                        <div class="card-content white-text">
+                            <div id="create-post-header">
+                                <span class="card-title">Posts</span>
+                            </div>
+                            <div id="p-divider" class="divider"></div>
+                            <div class="row">
+                                <div class="col s12">
+                                    <div class="collection">
+                                        <a href="#!" class="collection-item">Alvin<div class="secondary-content">
+                                                01/01/2021</div></a>
+                                        <a href="#!" class="collection-item">Alvin<div class="secondary-content">
+                                                01/01/2021</div></a>
+                                        <a href="#!" class="collection-item">Alvin<div class="secondary-content">
+                                                01/01/2021</div></a>
+                                        <a href="#!" class="collection-item">Alvin<div class="secondary-content">
+                                                01/01/2021</div></a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- comment on post component -->
+            <div class="row">
+                <div class="col s12 m11 offset-m1">
+                    <div class="card blue-grey darken-1">
+                        <div class="card-content white-text">
+                            <div id="create-post-header">
+                                <span class="card-title">Add Comment</span>
+                            </div>
+                            <div id="p-divider" class="divider"></div>
+                            <div class="row">
+
+                                <div class="input-field col s12">
+                                    <p>Comment:</p>
+                                    <p contenteditable="true" id="new-comment-content"></p>
+                                </div>
+
+                                <div class="input-field col s6">
+                                    <button id="cancel-new-comment-button" class="btn waves-effect waves-light fwb orange" type="submit"
+                                        name="action">Cancel</button>
+                                </div>
+
+                                <div class="input-field col s6">
+                                    <button id="add-new-comment-button" class="btn waves-effect waves-light fwb green" type="submit"
+                                        name="action">Add</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- comments component -->
+            <div class="row">
+                <div class="col s12 m11 offset-m1 comment-card">
+                    <div class="card blue-grey darken-1">
+                        <div class="card-content white-text">
+                            <div id="post-header-wrapper">
+                                <div id="post-title">
+                                    <span class="card-title">Comments</span>
+                                </div>
+                            </div>
+                            <div id="comment-content" class="white black-text">
+                                <p>This is where the comment text would go were this an actual comment rather than just placeholder text.</p>
+                                <p class="comment-author">- Author, 01/01/2021</p>
+                            </div>
+                            <div id="comment-content" class="white black-text">
+                                <p>This is where the comment text would go were this an actual comment rather than just placeholder text.</p>
+                                <p class="comment-author">- Author, 01/01/2021</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- new post button component -->
+            <div class="row">
+                <div class="col s12 m8 offset-m2">
+                    <button class="btn waves-effect waves-light fwb green" type="submit"
+                                        name="action">Create New Post</button>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.sidenav');
+            var instances = M.Sidenav.init(elems, { edge: 'right' });
+        });
+    </script>
+
+    <!-- Only include the logout script if the user is logged in -->
+    <script src="./js/logout.js"></script>
+    <!-- Only include the login script if the user is logged in -->
+    <script src="./js/login.js"></script>
+
+</body>
+
+</html>

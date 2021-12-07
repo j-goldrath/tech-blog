@@ -1,0 +1,86 @@
+#post-header-wrapper{
+    display: flex;
+    justify-content:space-between;
+  }
+
+#post-title{
+   margin-top: -5px; 
+}
+
+#post-author{
+    text-align: right;
+}
+
+#post-content{
+    padding: 15px;
+}
+
+#comment-content{
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+#create-post-title{
+    margin-top: -5px;
+}
+
+textarea{
+    resize: none;
+    margin-top: 5px;
+    background-color: white;
+}
+
+#new-post-content{
+    margin-top: 5px;
+    background-color: white;
+    padding: 5px;
+    color: black;
+}
+
+#new-comment-content{
+    margin-top: 5px;
+    background-color: white;
+    padding: 5px;
+    color: black;
+}
+
+#new-post-title{
+    margin-top: 5px;
+    background-color: white;
+    padding: 5px;
+    color: black;
+}
+
+#p-divider{
+    margin-bottom: 10px;
+}
+
+.fwb{
+    width: 100%;
+    margin-bottom: -30px;
+}
+
+.collection{
+    margin-top: 20px;
+    margin-bottom: -15px;
+}
+
+#primary-container{
+    padding-top: 20px;
+}
+
+.cancel-button{
+    background-color: red;
+}
+
+.submit-button{
+    background-color: green;
+}
+
+li{
+    list-style-type: none;
+}
+
+.comment-author{
+    text-align: right;
+}
