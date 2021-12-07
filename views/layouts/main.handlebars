@@ -4,41 +4,79 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tech Blog</title>
-  <link rel="stylesheet" href="/css/jass.css">
+  <title>OTC</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
   <header>
+
     <nav>
       <div class="nav-wrapper">
-        <a href="#" class="brand-logo">Tech Blog</a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a href="sass.html">Homepage</a></li>
+        <a href="#!" class="brand-logo">Tech Blog</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="sass.html">Home</a></li>
           <li><a href="badges.html">Dashboard</a></li>
           {{#if logged_in}}
           <li><button class='btn' id="logout">Logout</button></li>
           {{/if}}
+          {{#unless logged_in}}
+          <li><button class="btn" id="login" href="/login">Login</a></li>
+          {{/unless}}
         </ul>
       </div>
     </nav>
+
+    <ul class="sidenav" id="mobile-demo">
+      <li><a href="sass.html">Home</a></li>
+      <li><a href="badges.html">Dashboard</a></li>
+      {{#if logged_in}}
+      <li><button class="btn" id="logout">Logout</button></li>
+      {{/if}}
+      {{#unless logged_in}}
+      <li><button class="btn" id="login" href="/login">Login</a></li>
+      {{/unless}}
+    </ul>
+
   </header>
 
+  {{!-- <header class="display-flex justify-space-between align-center p-2">
+    <h1>
+      User Registry
+    </h1>
+    <!-- Only display the logout button if the user is logged in -->
+    {{#if logged_in}}
+    <nav>
+      <button class="btn" id="logout">logout</button>
+    </nav>
+    {{/if}}
+  </header> --}}
+
   <main>
-    <div class="container">
-      {{{body}}}
+    <div class="container container-fluid mt-5">
+      {{{ body }}}
     </div>
   </main>
-
   <footer>
+
   </footer>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var elems = document.querySelectorAll('.sidenav');
+      var instances = M.Sidenav.init(elems, { edge: 'right' });
+    });
+  </script>
+
+  <!-- Only include the logout script if the user is logged in -->
   {{#if logged_in}}
-  <script src="/js/logout.js"></script>
+  <script src="./js/logout.js"></script>
   {{/if}}
 
 
