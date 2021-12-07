@@ -1,0 +1,72 @@
+{{!-- post section --}}
+<div class="row">
+    <div class="col s12">
+        <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+                <div id="post-header-wrapper">
+                    <div id="post-title">
+                        <span class="card-title">Title Of Post</span>
+                    </div>
+                    <div id="post-author">
+                        <span class="card-text">Posted by <a>Someone</a> on 1/1/2021</span>
+                    </div>
+                </div>
+                <div id="post-content" class="white black-text">
+                    <p>This is where the text content of a blog post would go.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{!-- comment section --}}
+<div class="row">
+    <div class="col s12 m11 offset-m1">
+        <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+                <div id="create-post-header">
+                    <span class="card-title">Add Comment</span>
+                </div>
+                <div id="p-divider" class="divider"></div>
+                <div class="row">
+
+                    <div class="input-field col s12">
+                        <p>Comment:</p>
+                        <p contenteditable="true" id="new-comment-content"></p>
+                    </div>
+
+                    <div class="input-field col s6">
+                        <button id="cancel-new-comment-button" class="btn waves-effect waves-light fwb orange"
+                            type="button" name="action">Cancel</button>
+                    </div>
+
+                    <div class="input-field col s6">
+                        <button id="add-new-comment-button" class="btn waves-effect waves-light fwb green" type="submit"
+                            name="action">Add</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- add comment component -->
+<div class="row">
+    <div class="col s12 m11 offset-m1 comment-card">
+        <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+                <div id="post-header-wrapper">
+                    <div id="post-title">
+                        <span class="card-title">Comments</span>
+                    </div>
+                </div>
+                <div id="comment-content" class="white black-text">
+                    <p>This is where the comment text would go were this an actual comment rather than just placeholder
+                        text.</p>
+                    <p class="comment-author">- Author, 01/01/2021</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

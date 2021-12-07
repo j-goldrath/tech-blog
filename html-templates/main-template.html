@@ -21,16 +21,16 @@
                 <a href="#!" class="brand-logo">Tech Blog</a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="sass.html">Home</a></li>
-                    <li><a href="badges.html">Dashboard</a></li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/dashboard">Dashboard</a></li>
                     <li><button class="btn" id="login" href="/login">Login</a></li>
                 </ul>
             </div>
         </nav>
 
         <ul class="sidenav" id="mobile-demo">
-            <li><a href="sass.html">Home</a></li>
-            <li><a href="badges.html">Dashboard</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/dashboard">Dashboard</a></li>
             <li><button class="btn" id="login" href="/login">Login</a></li>
         </ul>
 
@@ -84,7 +84,7 @@
                                 </div>
 
                                 <div class="input-field col s6">
-                                    <button id="cancel-new-post-button" class="btn waves-effect waves-light fwb orange" type="submit"
+                                    <button id="cancel-new-post-button" class="btn waves-effect waves-light fwb orange" type="button"
                                         name="action">Cancel</button>
                                 </div>
 
@@ -111,27 +111,27 @@
                             <div class="row">
                                 <div class="input-field col s12 m6">
                                     <p>Title:</p>
-                                    <p contenteditable="true" id="new-post-title"></p>
+                                    <p contenteditable="true" id="edit-post-title"></p>
                                 </div>
 
 
                                 <div class="input-field col s12">
                                     <p>Content:</p>
-                                    <p contenteditable="true" id="new-post-content"></p>
+                                    <p contenteditable="true" id="edit-post-content"></p>
                                 </div>
 
                                 <div class="input-field col s4">
-                                    <button class="btn waves-effect waves-light fwb orange" type="submit"
+                                    <button id="canel-edit-post-button" class="btn waves-effect waves-light fwb orange" type="button"
                                         name="action">Cancel</button>
                                 </div>
 
                                 <div class="input-field col s4">
-                                    <button class="btn waves-effect waves-light fwb red" type="submit"
+                                    <button id="delete-post-button" class="btn waves-effect waves-light fwb red" type="button"
                                         name="action">Delete</button>
                                 </div>
 
                                 <div class="input-field col s4">
-                                    <button class="btn waves-effect waves-light fwb green" type="submit"
+                                    <button id="update-post-button" class="btn waves-effect waves-light fwb green" type="submit"
                                         name="action">Update</button>
                                 </div>
 
@@ -187,7 +187,7 @@
                                 </div>
 
                                 <div class="input-field col s6">
-                                    <button id="cancel-new-comment-button" class="btn waves-effect waves-light fwb orange" type="submit"
+                                    <button id="cancel-new-comment-button" class="btn waves-effect waves-light fwb orange" type="button"
                                         name="action">Cancel</button>
                                 </div>
 
@@ -202,7 +202,7 @@
                 </div>
             </div>
 
-            <!-- comments component -->
+            <!-- add comment component -->
             <div class="row">
                 <div class="col s12 m11 offset-m1 comment-card">
                     <div class="card blue-grey darken-1">
