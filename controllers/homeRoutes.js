@@ -72,6 +72,20 @@ router.get('/posts/:id', withAuth, (req, res) => {
 });
 
 // GET request to login user
+router.get('/comments/:post_id', withAuth, (req, res) => {
+  Post.findByPk(req.params.post_id, { include: [User, { model: Comment, include: [User] }] })
+  .then(post => {
+
+    const posts = post.get({ plain: true });
+    console.log(posts);
+    res.render('add-comments', { posts });
+  })
+  .catch(err => {
+    res.send(err);
+  });
+});
+
+// GET request to login user
 router.get('/login', (req, res) => {
   if (req.session.logged_in) {
     res.redirect('/');

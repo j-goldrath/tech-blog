@@ -44,6 +44,13 @@ textarea{
     color: black;
 }
 
+#new-comment-body{
+    margin-top: 5px;
+    background-color: white;
+    padding: 5px;
+    color: black;
+}
+
 #new-post-title{
     margin-top: 5px;
     background-color: white;
