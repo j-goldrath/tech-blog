@@ -15,20 +15,19 @@ const registerFormHandler = async (event) => {
 
         if (firstName && lastName && email && password) {
             // Send the e-mail and password to the server
-            const response = await fetch('/api/users/register', {
+            const response = await fetch('/api/users/signup', {
                 method: 'POST',
-                body: JSON.stringify({ first_name:firstName, last_name:lastName, email, password }),
+                body: JSON.stringify({ firstName, lastName, email, password }),
                 headers: { 'Content-Type': 'application/json' },
             });
 
             if (response.ok) {
-                document.location.replace('/');
+                document.location.replace('/login');
             } else {
                 alert('Failed to register!');
             }
         }
     };
 };
-document
-    .querySelector('.register-form')
-    .addEventListener('submit', registerFormHandler);
+
+document.querySelector('.register-form').addEventListener('submit', registerFormHandler);

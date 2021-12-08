@@ -14,7 +14,7 @@ router.get('/', withAuth, async (req, res) => {
 
         res.render('dashboard', {
             posts,
-            layout: 'dashboard'
+            logged_in: req.session.logged_in
         });
     } catch (err) {
         res.status(500).json(err);
@@ -42,7 +42,6 @@ router.get('/edit-post/:id', withAuth, async (req, res) => {
             const postData = post.get({ plain: true });
             res.render('edit-post', {
                 postData,
-                layout: 'dashboard'
             });
 
         } else {
@@ -53,3 +52,5 @@ router.get('/edit-post/:id', withAuth, async (req, res) => {
         res.status(500).json(err);
     }
 });
+
+module.exports = router;

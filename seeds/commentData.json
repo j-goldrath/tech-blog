@@ -1,0 +1,17 @@
+[
+    {
+        "body": "I concur.",
+        "user_id": 1,
+        "post_id": 1
+    },
+    {
+        "body": "First one to comment!",
+        "user_id": 2,
+        "post_id": 2    
+    },
+    {
+        "body": "Is anybody else as confused as I am right now?",
+        "user_id": 3,
+        "post_id": 3    
+    }
+]

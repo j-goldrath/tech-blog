@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OTC</title>
+  <title>Tech Blog</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
@@ -18,45 +18,33 @@
 
     <nav>
       <div class="nav-wrapper">
-        <a href="#!" class="brand-logo">Tech Blog</a>
+        <a href="/" class="brand-logo">Tech Blog</a>
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
-          <li><a href="sass.html">Home</a></li>
-          <li><a href="badges.html">Dashboard</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/dashboard">Dashboard</a></li>
           {{#if logged_in}}
-          <li><button class='btn' id="logout">Logout</button></li>
+          <li><button class='btn' id="logout" href="/logout">Logout</button></li>
           {{/if}}
           {{#unless logged_in}}
-          <li><button class="btn" id="login" href="/login">Login</a></li>
+          <li><button class="btn" id="login" href="/login">Login</button></li>
           {{/unless}}
         </ul>
       </div>
     </nav>
 
     <ul class="sidenav" id="mobile-demo">
-      <li><a href="sass.html">Home</a></li>
-      <li><a href="badges.html">Dashboard</a></li>
+      <li><a href="/">Home</a></li>
+      <li><a href="/dashboard">Dashboard</a></li>
       {{#if logged_in}}
-      <li><button class="btn" id="logout">Logout</button></li>
+      <li><button class="btn" id="logout" href="/logout">Logout</button></li>
       {{/if}}
       {{#unless logged_in}}
-      <li><button class="btn" id="login" href="/login">Login</a></li>
+      <li><button class="btn" id="login" href="/login">Login</button></li>
       {{/unless}}
     </ul>
 
   </header>
-
-  {{!-- <header class="display-flex justify-space-between align-center p-2">
-    <h1>
-      User Registry
-    </h1>
-    <!-- Only display the logout button if the user is logged in -->
-    {{#if logged_in}}
-    <nav>
-      <button class="btn" id="logout">logout</button>
-    </nav>
-    {{/if}}
-  </header> --}}
 
   <main>
     <div class="container container-fluid mt-5">
@@ -79,6 +67,10 @@
   {{#if logged_in}}
   <script src="./js/logout.js"></script>
   {{/if}}
+  <!-- Only include the login script if the user is logged in -->
+  {{#unless logged_in}}
+  <script src="./js/login.js"></script>
+  {{/unless}}
 
 </body>
 

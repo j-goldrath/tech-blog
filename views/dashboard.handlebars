@@ -3,7 +3,7 @@
         <div class="card blue-grey darken-1">
             <div class="card-content white-text">
                 <div id="create-post-header">
-                    <span class="card-title">Posts</span>
+                    <span class="card-title">My Posts</span>
                 </div>
                 <div id="p-divider" class="divider"></div>
                 <div class="row">
@@ -12,7 +12,7 @@
                             {{#each posts as |post|}}
                             <a href="/posts/{{post.id}}" class="collection-item">{{post.title}}<div
                                     class="secondary-content">
-                                    {{post.createdAt}}</div></a>
+                                    {{post.created_at}}</div></a>
                             {{/each}}
                         </div>
                     </div>

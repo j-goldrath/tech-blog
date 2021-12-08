@@ -1,0 +1,17 @@
+[
+    {
+        "title": "3d Printing",
+        "content": "New SLA printers have brought precision to the micron level.",
+        "user_id": 1
+    },
+    {
+        "title": "Drones",
+        "content": "The newest DJI Mavic Pro 4 is ourageously overpriced compared to the previous models.",
+        "user_id": 2
+    },
+    {
+        "title": "Armchair",
+        "content": "What would you all consider to be a good chair that offers great back support?",
+        "user_id": 3
+    }
+]

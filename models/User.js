@@ -6,9 +6,6 @@ class User extends Model {
   checkPassword(loginPw) {
     return bcrypt.compareSync(loginPw, this.password);
   }
-  getDisplayName() {
-    return this.firstname.charAt(0) + '. ' + this.lastname
-  }
 }
 
 User.init(
@@ -42,6 +39,15 @@ User.init(
         len: [8],
       },
     },
+    displayName: {
+      type: DataTypes.VIRTUAL,
+      get() {
+        return this.firstName + ' ' + this.lastName.charAt(0) + '.';
+      },
+      set(value) {
+        throw new Error('Do not try to set the `dispalyName` value!');
+      }
+    }
   },
   {
     hooks: {
@@ -49,7 +55,7 @@ User.init(
         newUserData.password = await bcrypt.hash(newUserData.password, 10);
         return newUserData;
       },
-      beforeUpdatte: async (updatedUserData) => {
+      beforeUpdate: async (updatedUserData) => {
         if (updatedUserData.changed('password')) {
           updatedUserData.password = await bcrypt.hash(
             updatedUserData.password,
