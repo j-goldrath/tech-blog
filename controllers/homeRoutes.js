@@ -71,7 +71,7 @@ router.get('/posts/:id', withAuth, (req, res) => {
     });
 });
 
-// GET request to login user
+// GET request to render view for adding comment to post with specific post_id
 router.get('/comments/:post_id', withAuth, (req, res) => {
   Post.findByPk(req.params.post_id, { include: [User, { model: Comment, include: [User] }] })
   .then(post => {
