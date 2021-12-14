@@ -10,7 +10,7 @@
                     <div class="col s12">
                         <div class="collection">
                             {{#each posts as |post|}}
-                            <a href="/posts/{{post.id}}" class="collection-item">{{post.title}}<div
+                            <a href="/posts/edit/{{post.id}}" class="collection-item">{{post.title}}<div
                                     class="secondary-content">
                                     {{post.created_at}}</div></a>
                             {{/each}}

@@ -91,3 +91,11 @@ li{
 .comment-author{
     text-align: right;
 }
+
+#edit-post-content {
+    background-color: white;
+}
+
+#edit-post-title {
+    background-color: white;
+}

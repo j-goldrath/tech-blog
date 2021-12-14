@@ -57,6 +57,21 @@ router.get('/', (req, res) => {
 //   }
 // });
 
+// GET request to render update page for specific post by id
+router.get('/posts/edit/:id', withAuth, async (req, res) => {
+  Post.findByPk(req.params.id, { include: [User, { model: Comment, include: [User] }] })
+  .then(post => {
+
+    const posts = post.get({ plain: true });
+    console.log(posts);
+    res.render('edit-post', { posts });
+  })
+  .catch(err => {
+    res.send(err);
+  });
+})
+
+
 // GET request to find specific post by id
 router.get('/posts/:id', withAuth, (req, res) => {
   Post.findByPk(req.params.id, { include: [User, { model: Comment, include: [User] }] })
